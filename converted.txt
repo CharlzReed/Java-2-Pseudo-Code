@@ -1,0 +1,27 @@
+=+=+=+=+=
+    Pre-condition: (int row, int col, int num)
+    Post-condition: Boolean
+=+=+=+=+=
+    Start of private method called checkValid, with parameters (int row, int col, int num), and return type Boolean {
+        Create new variable called valid, of type Boolean
+        For loop (starting at int x equals 0 and continuing while x is less than 9, incrementing by x++) {
+            if (board at index x at index col is equivalent to num) {
+                Set valid to false;
+            }
+        }
+        For loop (starting at int y equals 0 and continuing while y is less than 9, incrementing by y++) {
+            if (board at index row at index y is equivalent to num) {
+                Set valid to false;
+            }
+        }
+        Create new variable called rowsection, of type int
+        Create new variable called colsection, of type int
+        For loop (starting at int x equals 0 and continuing while x is less than 3, incrementing by x++) {
+            For loop (starting at int y equals 0 and continuing while y is less than 3, incrementing by y++) {
+                if (board at index rowsection times 3 plus x at index colsection times 3 plus y is equivalent to num) {
+                    Set valid to false;
+                }
+            }
+        }
+        return valid;
+    }
